@@ -14,14 +14,13 @@ import java.util.Map;
 @RequestMapping("/api/accounts")
 public class AccountController {
 
-    //12365546642342
     private AccountService accountService;
 
     public AccountController(AccountService accountService) {
         this.accountService = accountService;
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<AccountDto> addAccount(@RequestBody AccountDto accountDto) {
         return new ResponseEntity<>(accountService.createAccount(accountDto), HttpStatus.CREATED);
     }
@@ -65,4 +64,9 @@ public class AccountController {
         return ResponseEntity.ok(accountDto);
     }
 
+    @GetMapping("/balance/above")
+    public ResponseEntity<List<AccountDto>> balanceAbove200() {
+        List<AccountDto> accountDtos = accountService.balanceAbove200();
+        return ResponseEntity.ok(accountDtos);
+    }
 }

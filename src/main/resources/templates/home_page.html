@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<header id="header"> Banking app by Lucas</header>
+<body class="background">
+
+<h1>Bank app</h1>
+
+
+<form action="#" th:action="@{/api/accounts/buscar}" method="get">
+    <label for="name">NAME:</label>
+    <input type="text" id="name" name="name" />
+
+    <button type="submit">Buscar</button>
+</form>
+
+<a href="/api/accounts/" class="btn btn-primary">go to Index</a>
+<a href="/api/accounts/homePage" class="btn btn-primary">go to home page</a></a>
+
+</body>
+</html>
