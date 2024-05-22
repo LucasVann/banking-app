@@ -56,7 +56,7 @@ public class IndexController {
         return "resultado_busqueda";
     }
 
-    @PostMapping("/create_user")
+    @PostMapping("/create_user_short")
     public String createUserForm(AccountDto accountDto, Model model) {
         RestTemplate restTemplate = new RestTemplate();
         String url = "http://localhost:8080/api/accounts/create";

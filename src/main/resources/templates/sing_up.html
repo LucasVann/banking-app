@@ -8,9 +8,26 @@
 <form action="#" th:action="@{/api/accounts/create_user}" method="post">
     <label for="name">Name:</label>
     <input type="text" id="name" name="accountHolderName"/>
+
+    <label for="balance">Last Name:</label>
+    <input type="text" id="last_name" name="last_name"/>
+
+    <label for="balance">email:</label>
+    <input type="email" id="email" name="email"/>
+
     <label for="balance">balance:</label>
     <input type="number" id="balance" name="balance"/>
+
     <button id="sing-up" type="submit">submit</button>
+</form>
+
+<form action="#" th:action="@{/api/accounts/create_user_short}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name1" name="accountHolderName"/>
+    <label for="balance">balance:</label>
+    <input type="number" id="balance1" name="balance"/>
+
+    <button id="sing-up1" type="submit">submit</button>
 </form>
 
 <a href="/api/accounts/" class="btn btn-primary">go to Index</a>

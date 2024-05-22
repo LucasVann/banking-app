@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <title>Sing In/Login</title>
 </head>
-<body>
-
-
+<form action="#" th:action="@{/api/accounts/buscar}" method="get">
+    <label for="name">NAME:</label>
+    <input type="text" id="name" name="name" />
+    <label for="name">PASSWORD:</label>
+    <input type="password" id="password" name="password" />
+    <button type="submit">Login</button>
+</form>
+<h1>google login</h1>
+<a href="/api/accounts/forgotPassword" class="btn btn-primary">forgot password</a>
 <a href="/api/accounts/" class="btn btn-primary">go to Index</a>
 <a href="/api/accounts/homePage" class="btn btn-primary">go to home page</a>
 </body>
